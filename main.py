@@ -262,7 +262,7 @@ def train(autoencoder, data, epochs=60):
                 agg_style_loss = 0.
                 agg_reg_loss = 0.
                 y, mu, logvar = autoencoder(x)
-                save_debug_image(x, y.detach(), "../PerceptualLoss/debug/{}-{}.png".format(epoch, count))
+                save_debug_image(x, y.detach(), "../debug/{}-{}.png".format(epoch, count))
 
         # Get loss for each epoch for graph
         agg_epoch_style_loss_g = (agg_epoch_style_loss / count).detach()
