@@ -71,7 +71,7 @@ class VGGPerceptualLoss(torch.nn.Module):
 
 
 # Style picture, can be changed if needed.
-style_image = "../PerceptualLoss/Style/candy.jpg"
+style_image = "../Style/candy.jpg"
 style_img = Image.open(style_image).convert('RGB')
 vgg = VGGPerceptualLoss().to(device)
 
